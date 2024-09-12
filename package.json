@@ -9,11 +9,13 @@
     "start": "react-native start",
     "debug": "react-native start --experimental-debugger",
     "bundle:android": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/",
+    "release:apk": "cd android && gradlew assembleRelease && cd ../",
     "test": "jest"
   },
   "dependencies": {
     "@ant-design/icons-react-native": "^2.3.2",
     "@ant-design/react-native": "^5.2.3",
+    "@react-native-async-storage/async-storage": "^2.0.0",
     "@react-navigation/native": "^6.1.18",
     "@react-navigation/native-stack": "^6.11.0",
     "react": "18.3.1",
