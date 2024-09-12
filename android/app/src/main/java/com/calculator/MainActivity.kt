@@ -1,4 +1,4 @@
-package com.calculator
+package com.sunxiao.calculator
 
 import android.os.Bundle;
 import com.facebook.react.ReactActivity
