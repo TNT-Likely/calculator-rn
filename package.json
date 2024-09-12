@@ -9,7 +9,9 @@
     "start": "react-native start",
     "debug": "react-native start --experimental-debugger",
     "bundle:android": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/",
-    "release:apk": "cd android && gradlew assembleRelease && cd ../",
+    "release:apk": "npm run bundle:android && cd android && gradlew assembleRelease && cd ../",
+    "install:apk": "adb install android/app/build/outputs/apk/release/app-release.apk",
+    "clean": "rm -rf .temp",
     "test": "jest"
   },
   "dependencies": {
@@ -40,6 +42,7 @@
     "jest": "^29.6.3",
     "prettier": "2.8.8",
     "react-test-renderer": "18.3.1",
+    "sharp": "^0.33.5",
     "typescript": "5.0.4"
   },
   "peerDependencies": {
